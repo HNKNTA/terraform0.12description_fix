@@ -18,7 +18,7 @@ if __name__ == "__main__":
         read_file = f.read()
 
         found_list = re.findall(r"(#.+?)(\b(variable|output)\b\s+?\".+?\".+?\s*?\{)", read_file, re.DOTALL)
-        print(found_list)
+
         for _tuple in found_list:
             read_file = read_file.replace(_tuple[0], '')
             read_file = read_file.replace(
